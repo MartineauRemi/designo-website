@@ -5,6 +5,7 @@ import Homepage from "./pages/Homepage";
 import OurCompany from "./pages/OurCompany";
 import Locations from "./pages/Locations";
 import Contact from "./pages/Contact";
+import Footer from "./layout/Footer";
 
 function App() {
   return (
@@ -14,20 +15,20 @@ function App() {
         <Header />
 
         <Switch>
-        <Route exact path="/">
-          <Homepage />
-        </Route>
-        <Route path="/our-company">
-          <OurCompany />
-        </Route>
-        <Route path="/locations">
-          <Locations />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        
-      </Switch>
+          <Route exact path="/">
+            <Homepage />
+          </Route>
+          <Route path="/our-company">
+            <OurCompany />
+          </Route>
+          <Route path="/locations">
+            <Locations />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+        </Switch>
+        <Footer />
       </div>
     </Router>
   );

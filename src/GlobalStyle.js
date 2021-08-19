@@ -12,34 +12,41 @@ const GlobalStyle = createGlobalStyle`
     .App{
         width: 100vw;
         min-height: 100vh;
+        height: 100vh;
         padding: 0 var(---page-horizontal-padding);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media screen and (max-width: 767px){
+            text-align: center;
+        }
     }
 
     html{
         font-family: 'Jost', sans-serif;
+
+        --layout-max-width: 69.375rem;
         
         //padding and margin
         --wrapper-padding: 1.5rem;
         --button-padding: 1rem 1.5rem;
-        
         --page-top-padding: 6rem;
         --page-horizontal-padding: 1.5rem;
-        
         --header-vertical-padding: 2.125rem;
 
         //font-weights
         --fw-regular: 400;
         --fw-medium: 500;
         
-        //primary colors
+        //colors
         --black: #000000;
         --white: #ffffff;
         --peach: #e7816b;
-
-        //secondary colors
         --dark-gray: #333136;
         --light-gray: #f1f3f5;
         --light-peach: #ffad9b;
+        --black-secondary: #1d1c1e;
 
         //border-radius
         --btn-border-radius: 0.5rem;
@@ -48,7 +55,6 @@ const GlobalStyle = createGlobalStyle`
         @media screen and (min-width: 768px){
             --page-top-padding: 9.75rem;
             --page-horizontal-padding: 2.5rem;
-
             --header-vertical-padding: 4rem;
         }
 
