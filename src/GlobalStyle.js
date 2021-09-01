@@ -10,7 +10,6 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .App{
-        width: 100vw;
         min-height: 100vh;
         height: 100vh;
         padding: 0 var(---page-horizontal-padding);
@@ -73,19 +72,21 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h1{
-        font-size: 3rem;
-        line-height: 3rem;
+        font-size: 2rem;
+        line-height: 2.25rem;
+        font-weight: var(----fw-medium);
     }
 
     h2{
-        font-size: 2.5rem;
-        line-height: 3rem;
-        letter-spacing: 2px;
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+        letter-spacing: 1.4px;
+        font-weight: var(----fw-medium);
     }
 
     h3{
-        font-size: 1.25rem;
-        line-height: 1.625rem;
+        font-size: 1rem;
+        line-height: 1.375rem;
         letter-spacing: 5px;
     }
 
@@ -95,6 +96,24 @@ const GlobalStyle = createGlobalStyle`
 
     a{
         text-decoration: none;
+    }
+
+    @media screen and (min-width: 768px){
+        h1{
+            font-size: 3rem;
+            line-height: 3rem;
+        }
+
+        h2{
+            font-size: 2.5rem;
+            line-height: 3rem;
+            letter-spacing: 2px;
+        }
+
+        h3{
+            font-size: 1.25rem;
+            line-height: 1.625rem;
+        }
     }
 
 `

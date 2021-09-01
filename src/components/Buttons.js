@@ -7,7 +7,7 @@ export const Button = styled.button`
     font-weight: var(--fw-medium);
     text-transform: uppercase;
     padding: var(--button-padding);
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
     border-radius: var(--btn-border-radius);
 `
 

@@ -13,7 +13,7 @@ const Wrapper = styled.header`
     top: 0;
     padding: var(--header-vertical-padding) var(--page-horizontal-padding);
     background: var(--white);
-    z-index: 2;
+    z-index: 3;
     width: 100%;
 `
 

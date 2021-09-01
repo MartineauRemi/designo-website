@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GlobalStyle from "./GlobalStyle";
 import Header from "./layout/Header";
 import Homepage from "./pages/Homepage";
+import Projects from "./pages/Projects";
 import OurCompany from "./pages/OurCompany";
 import Locations from "./pages/Locations";
 import Contact from "./pages/Contact";
@@ -17,6 +18,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Homepage />
+          </Route>
+          <Route path="/projects/:category">
+            <Projects />
           </Route>
           <Route path="/our-company">
             <OurCompany />

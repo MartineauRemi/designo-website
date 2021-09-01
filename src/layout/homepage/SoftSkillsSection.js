@@ -5,14 +5,12 @@ import friendly from "../../assets/home/desktop/illustration-friendly.svg"
 import resourceful from "../../assets/home/desktop/illustration-resourceful.svg"
 
 const SoftSkillsWrapper = styled.section`
+    place-self: center;
     width: 100%;
-    padding: 0 var(--page-horizontal-padding);
-    display: grid;
+    max-width: var(--layout-max-width);
 `
 
 const SoftSkills = styled.ul`
-    place-self: center;
-    max-width: var(--layout-max-width);
     width: 100%;
 
     @media screen and (min-width: 1440px){
