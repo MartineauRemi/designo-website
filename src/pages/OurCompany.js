@@ -12,18 +12,31 @@ import theRealDealDesktop from "../assets/about/desktop/image-real-deal.jpg"
 import worldClassTalentMobile from "../assets/about/mobile/image-world-class-talent.jpg"
 import worldClassTalentTablet from "../assets/about/tablet/image-world-class-talent.jpg"
 import worldClassTalentDesktop from "../assets/about/desktop/image-world-class-talent.jpg"
+import LocationsCards from '../layout/shared/LocationsCards'
 
 const Main = styled.main`
     height: 100%;
 
+    .our-company__locations-cards{
+        margin-bottom: 7.5rem;
+    }
+
+    .our-company__text-card:nth-child(2){
+        margin-bottom: 7.5rem;
+    }
+
     @media screen and (min-width: 1440px){
-        .about__text-card{
+        .our-company__locations-cards{
+            margin-bottom: 10rem;
+        }
+        .our-company__text-card{
             display: flex;
             flex-direction: row-reverse;
             align-items: center;
 
             &:nth-child(2){
                 flex-direction: row;
+
                 article {
                     border-radius: 0 var(--layout-border-radius) var(--layout-border-radius) 0;
                 }
@@ -31,6 +44,8 @@ const Main = styled.main`
                 img{
                     border-radius: var(--layout-border-radius) 0 0 var(--layout-border-radius);
                 }
+
+                margin-bottom: 10rem;
             }
         }
     }
@@ -97,7 +112,7 @@ const Aside = styled.aside`
 export default function OurCompany() {
     return (
         <Main>
-            <Card className="about__text-card">
+            <Card className="our-company__text-card">
                 <Aside>
                     <picture>
                         <source media="(min-width: 1440px)" srcset={aboutUsDesktop}/>
@@ -115,7 +130,7 @@ export default function OurCompany() {
                 </Article>
             </Card>
 
-            <Card className="about__text-card">
+            <Card className="our-company__text-card">
                 <Aside>
                     <picture>
                         <source media="(min-width: 1440px)" srcset={worldClassTalentDesktop}/>
@@ -136,7 +151,9 @@ export default function OurCompany() {
                 </Article>
             </Card>
 
-            <Card className="about__text-card">
+            <LocationsCards className="our-company__locations-cards" />
+
+            <Card className="our-company__text-card">
                 <Aside>
                     <picture>
                         <source media="(min-width: 1440px)" srcset={theRealDealDesktop}/>
@@ -154,9 +171,6 @@ export default function OurCompany() {
                         By combining business and marketing strategies, we inspire audiences to take action and drive real results.
                     </p>
                 </Article>
-                <Aside>
-
-                </Aside>
             </Card>
         </Main>
     )
