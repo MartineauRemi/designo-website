@@ -12,7 +12,9 @@ import theRealDealDesktop from "../assets/about/desktop/image-real-deal.jpg"
 import worldClassTalentMobile from "../assets/about/mobile/image-world-class-talent.jpg"
 import worldClassTalentTablet from "../assets/about/tablet/image-world-class-talent.jpg"
 import worldClassTalentDesktop from "../assets/about/desktop/image-world-class-talent.jpg"
+
 import LocationsCards from '../layout/shared/LocationsCards'
+import CTABanner from '../layout/shared/CTABanner'
 
 const Main = styled.main`
     height: 100%;
@@ -25,14 +27,19 @@ const Main = styled.main`
         margin-bottom: 7.5rem;
     }
 
+    @media screen and (min-width: 768px){
+        padding: 0 2.5rem;
+    }
+
     @media screen and (min-width: 1440px){
         .our-company__locations-cards{
             margin-bottom: 10rem;
         }
+
         .our-company__text-card{
             display: flex;
             flex-direction: row-reverse;
-            align-items: center;
+            align-items: stretch;
 
             &:nth-child(2){
                 flex-direction: row;
@@ -53,8 +60,6 @@ const Main = styled.main`
 `
 
 const Card = styled.section`
-    max-width: 69.375rem;
-
     @media screen and (min-width: 768px){
         margin-bottom: 7.5rem;
     }
@@ -66,6 +71,9 @@ const Card = styled.section`
 
 const Article = styled.article`
     padding: 5rem 1.5rem;
+    height: auto;
+    display: grid;
+
     color: ${props => props.color === 'white' 
                         ? 'var(--white)' : 'var(--dark-gray)'};
 
@@ -90,6 +98,10 @@ const Article = styled.article`
     }
 `
 
+const Text = styled.div`
+    place-self: center;
+`
+
 const Aside = styled.aside`
    img{
        width: 100%;
@@ -104,9 +116,9 @@ const Aside = styled.aside`
    @media screen and (min-width: 1440px){
         img{
             border-radius: 0 var(--layout-border-radius) var(--layout-border-radius) 0;
+            width: 29.75rem;
         }
    }
-
 `
 
 export default function OurCompany() {
@@ -121,12 +133,14 @@ export default function OurCompany() {
                     </picture>
                 </Aside>
                 <Article color='white'>
-                    <h1>About Us</h1>
-                    <p>
-                        Founded in 2010, we are a creative agency that produces lasting results for our clients.
-                        We’ve partnered with many startups, corporations, and nonprofits alike to craft designs that make real impact.
-                        We’re always looking forward to creating brands, products, and digital experiences that connect with our clients’ audiences.
-                    </p>
+                    <Text>
+                        <h1>About Us</h1>
+                        <p>
+                            Founded in 2010, we are a creative agency that produces lasting results for our clients.
+                            We’ve partnered with many startups, corporations, and nonprofits alike to craft designs that make real impact.
+                            We’re always looking forward to creating brands, products, and digital experiences that connect with our clients’ audiences.
+                        </p>
+                    </Text>
                 </Article>
             </Card>
 
@@ -139,15 +153,17 @@ export default function OurCompany() {
                     </picture>
                 </Aside>
                 <Article>
-                    <h1>World-class talent</h1>
-                    <p>
-                        We are a crew of strategists, problem-solvers, and technologists.
-                        Every design is thoughtfully crafted from concept to launch, ensuring success in its given market.
-                        We are constantly updating our skills in a myriad of platforms.   
-                        Our team is multi-disciplinary and we are not merely interested in form — content and meaning are just as important.
-                        We give great importance to craftsmanship, service, and prompt delivery.
-                        Clients have always been impressed with our high-quality outcomes that encapsulates their brand’s story and mission.    
-                    </p>
+                    <Text>
+                        <h1>World-class talent</h1>
+                        <p>
+                            We are a crew of strategists, problem-solvers, and technologists.
+                            Every design is thoughtfully crafted from concept to launch, ensuring success in its given market.
+                            We are constantly updating our skills in a myriad of platforms.   
+                            Our team is multi-disciplinary and we are not merely interested in form — content and meaning are just as important.
+                            We give great importance to craftsmanship, service, and prompt delivery.
+                            Clients have always been impressed with our high-quality outcomes that encapsulates their brand’s story and mission.    
+                        </p>
+                    </Text>
                 </Article>
             </Card>
 
@@ -162,16 +178,19 @@ export default function OurCompany() {
                     </picture>
                 </Aside>
                 <Article>
-                    <h1>The real deal</h1>
-                    <p>
-                        As strategic partners in our clients’ businesses, we are ready to take on any challenge as our own.
-                        Solving real problems require empathy and collaboration, and we strive to bring a fresh perspective to every opportunity.
-                        We make design and technology more accessible and give you tools to measure success.
-                        We are visual storytellers in appealing and captivating ways.
-                        By combining business and marketing strategies, we inspire audiences to take action and drive real results.
-                    </p>
+                    <Text>
+                        <h1>The real deal</h1>
+                        <p>
+                            As strategic partners in our clients’ businesses, we are ready to take on any challenge as our own.
+                            Solving real problems require empathy and collaboration, and we strive to bring a fresh perspective to every opportunity.
+                            We make design and technology more accessible and give you tools to measure success.
+                            We are visual storytellers in appealing and captivating ways.
+                            By combining business and marketing strategies, we inspire audiences to take action and drive real results.
+                        </p>
+                    </Text>
                 </Article>
             </Card>
+            <CTABanner />
         </Main>
     )
 }

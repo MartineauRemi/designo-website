@@ -52,6 +52,7 @@ const GlobalStyle = createGlobalStyle`
 
     main{
         position: relative;
+        max-width: var(--layout-max-width);
     }
 
     p{
