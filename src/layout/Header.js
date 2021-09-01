@@ -7,10 +7,7 @@ import Logo from "../components/Logo"
 import MenuLinks from './MenuLinks'
 
 const Wrapper = styled.header`
-    position: fixed;
     display: grid;
-    left: 0;
-    top: 0;
     padding: var(--header-vertical-padding) var(--page-horizontal-padding);
     background: var(--white);
     z-index: 3;

@@ -7,11 +7,23 @@ import OurCompany from "./pages/OurCompany";
 import Locations from "./pages/Locations";
 import Contact from "./pages/Contact";
 import Footer from "./layout/Footer";
+import styled from "styled-components";
+
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+
+  @media screen and (max-width: 1439px){
+      text-align: center;
+  }
+`
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <AppContainer className="App">
         <GlobalStyle />
         <Header />
 
@@ -33,7 +45,7 @@ function App() {
           </Route>
         </Switch>
         <Footer />
-      </div>
+      </AppContainer>
     </Router>
   );
 }

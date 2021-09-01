@@ -57,7 +57,7 @@ export default function MenuLinks({className, header}) {
     return (
         <Links className={className} header={header}>
             <LinkWrapper>
-                <Link to="/our-compagny">Our Company</Link>
+                <Link to="/our-company">Our Company</Link>
             </LinkWrapper>
             <LinkWrapper>
                 <Link to="/locations">Locations</Link>

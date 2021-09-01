@@ -9,19 +9,6 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
-    .App{
-        min-height: 100vh;
-        height: 100vh;
-        padding: 0 var(---page-horizontal-padding);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        @media screen and (max-width: 767px){
-            text-align: center;
-        }
-    }
-
     html{
         font-family: 'Jost', sans-serif;
 
@@ -45,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
         --dark-gray: #333136;
         --light-gray: #f1f3f5;
         --light-peach: #ffad9b;
+        --very-light-peach: #fdf3f0;
         --black-secondary: #1d1c1e;
 
         //border-radius
@@ -74,14 +62,14 @@ const GlobalStyle = createGlobalStyle`
     h1{
         font-size: 2rem;
         line-height: 2.25rem;
-        font-weight: var(----fw-medium);
+        font-weight: var(--fw-medium);
     }
 
     h2{
         font-size: 1.75rem;
         line-height: 2.25rem;
         letter-spacing: 1.4px;
-        font-weight: var(----fw-medium);
+        font-weight: var(--fw-medium);
     }
 
     h3{
