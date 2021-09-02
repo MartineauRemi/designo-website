@@ -27,7 +27,7 @@ const Text = styled.div`
     max-width: 400px;
 `
 
-export default function ProjectsHeader({category}) {
+export default function ProjectsHeader({className,category}) {
     const title = category.replace('-', ' ')
     const paraphs = [
         {
@@ -46,7 +46,7 @@ export default function ProjectsHeader({category}) {
     const paraph = paraphs.filter(p => p.category === category)[0];
 
     return (
-        <Wrapper>
+        <Wrapper className={className}>
             <Text>
                 <Title>{title}</Title>
                 <p>{paraph.text}</p>
