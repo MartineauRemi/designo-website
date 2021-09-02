@@ -7,7 +7,8 @@ const Card = styled.section`
     text-align: center;
     width: 100%;
     max-width: var(--layout-max-width);
-
+    color: var(--dark-gray);
+    
     &:hover{
         color: var(--white);
         
