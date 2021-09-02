@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from "react-router-dom"
 import rightArrow from "../../assets/shared/desktop/icon-right-arrow.svg"
 
-const Wrapper = styled(Link)`
+const Wrapper = styled.div`
     width: 100%;
     border-radius: var(--layout-border-radius);
     color: var(--white);
@@ -36,7 +36,15 @@ const BgImg = styled.img`
     object-fit: cover;
     border-radius: var(--layout-border-radius);
     width: 100%;
-    height: 100%;
+    height: 20rem;
+
+    @media screen and (min-width: 768px){
+        height: 12.5rem;
+    }
+
+    @media screen and (min-width: 1440px){
+        height: 19.25rem;
+    }
 `
 
 const Content = styled.div`
@@ -68,30 +76,33 @@ const CTAText = styled.h3`
     margin-right: 1rem;
 `
 
-export default function Category({className, title, data, imgPaths}) {
-    const url = data.url
+export default function Category({className, data}) {
+    const paths = data.images
     
     return (
-        <Wrapper className={className} to={url} data={data}>
-            {/* <Content>
-                <Title>{title}</Title>
-                <CTA>
-                    <CTAText>
-                        view projects
-                    </CTAText>
-                    <img
-                        src={rightArrow}
-                        alt=""
-                        width="8px"
-                        height="16px"/>
-                </CTA>
-            </Content> */}
-            <picture>
-                <source media="(min-width: 1440px)" srcset={imgPaths.desktopLarge}/>
-                <source media="(min-width: 1024px)" srcset={imgPaths.desktopSmall}/>
-                <source media="(min-width: 768px)" srcset={imgPaths.tablet}/>
-                <BgImg src={imgPaths.mobile} alt="" />
-            </picture>
-        </Wrapper>
+        <Link
+            className={className}
+            to={data.url}>
+            <Wrapper data={data}>
+                {/* <Content>
+                    <Title>{title}</Title>
+                    <CTA>
+                        <CTAText>
+                            view projects
+                        </CTAText>
+                        <img
+                            src={rightArrow}
+                            alt=""
+                            width="8px"
+                            height="16px"/>
+                    </CTA>
+                </Content> */}
+                <picture>
+                    <source media="(min-width: 1440px)" srcSet={paths.desktop}/>
+                    <source media="(min-width: 768px)" srcSet={paths.tablet}/>
+                    <BgImg src={paths.mobile} alt="" />
+                </picture>
+            </Wrapper>
+        </Link>
     )
 }
