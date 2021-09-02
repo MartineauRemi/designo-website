@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { FacebookIcon, InstagramIcon, TwitterIcon, YoutubeIcon, PinterestIcon } from '../components/SocialMediaIcons'
 import Logo from "../components/Logo"
 import MenuLinks from './MenuLinks'
+import { Link } from "react-router-dom"
 
 const socialMediaURLs = {
     facebook: "https://facebook.com",
@@ -95,7 +96,9 @@ export default function Footer() {
     return (
         <Wrapper>
             <Content>
-                <Logo light />
+                <Link to="/">
+                    <Logo light />
+                </Link>
                 <Line className="footer__line"/>
                 <MenuLinks className="footer__menu-links" />
 

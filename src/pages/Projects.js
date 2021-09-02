@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import ProjectsHeader from '../layout/projects/ProjectsHeader'
 import ProjectsGallery from "../layout/projects/ProjectsGallery"
-import Category from "../components/shared/Category"
 
 const Main = styled.main`
     .projects__projects-header, .projects__projects-gallery{

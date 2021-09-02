@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { WhiteBtn } from '../../components/Buttons'
 import heroPhone from "../../assets/home/desktop/image-hero-phone.png"
+import { Link } from "react-router-dom"
 
 const Wrapper = styled.section`
     place-self: center;
@@ -80,7 +81,9 @@ export default function Hero() {
                     With over 10 years in the industry, we are experienced with creating fully responsive websites,
                     app design, and engaging brand experiences. Find out more about our services.
                 </p>
-                <WhiteBtn>Learn more</WhiteBtn>
+                <Link to="our-company">
+                    <WhiteBtn>Learn more</WhiteBtn>
+                </Link>
             </Article>
             <Aside>
                 <img src={heroPhone} alt=""/>

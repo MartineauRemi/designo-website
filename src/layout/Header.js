@@ -5,6 +5,7 @@ import iconClose from "../assets/shared/mobile/icon-close.svg"
 import { Button } from "../components/Buttons"
 import Logo from "../components/Logo"
 import MenuLinks from './MenuLinks'
+import { Link } from "react-router-dom"
 
 const Wrapper = styled.header`
     display: grid;
@@ -60,7 +61,9 @@ export default function Header() {
     return (
         <Wrapper>
             <Content>
-                <Logo dark className='logo' alt="Welcome to Designo" />
+                <Link to="/">
+                    <Logo dark className='logo' alt="Welcome to Designo" />
+                </Link>
                 <MenuBtn onClick={() => onClickMenuBtn()}>
                     <img
                         src={menuBtnSrc}
