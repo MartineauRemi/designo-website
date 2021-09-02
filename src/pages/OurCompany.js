@@ -17,8 +17,6 @@ import LocationsCards from '../layout/shared/LocationsCards'
 import CTABanner from '../layout/shared/CTABanner'
 
 const Main = styled.main`
-    height: 100%;
-
     .our-company__locations-cards{
         margin-bottom: 7.5rem;
     }

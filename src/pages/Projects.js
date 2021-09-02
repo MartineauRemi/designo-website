@@ -1,17 +1,19 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
+import ProjectsHeader from '../layout/projects/ProjectsHeader'
 
-const Title = styled.h1`
-    margin-top: 15rem;
+const Main = styled.main`
+
 `
 
 export default function Projects() {
     const {category} = useParams()
 
     return (
-        <div>
-            <Title>{category}</Title>
-        </div>
+        <Main>
+            <ProjectsHeader
+                category={category} />
+        </Main>
     )
 }
