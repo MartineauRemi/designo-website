@@ -36,7 +36,7 @@ const BgImg = styled.img`
     object-fit: cover;
     border-radius: var(--layout-border-radius);
     width: 100%;
-    height: 20rem;
+    height: 15.625rem;
 
     @media screen and (min-width: 768px){
         height: 12.5rem;
