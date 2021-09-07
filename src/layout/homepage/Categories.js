@@ -26,7 +26,7 @@ const List = styled.ul`
         .categories__web-design{
             grid-area: web;
 
-            img{
+            .bg-img{
                 height: 40rem;
             }
         }

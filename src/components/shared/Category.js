@@ -5,10 +5,12 @@ import rightArrow from "../../assets/shared/desktop/icon-right-arrow.svg"
 
 const Wrapper = styled.div`
     width: 100%;
+    height: 100%;
     border-radius: var(--layout-border-radius);
     color: var(--white);
     position: relative;
     display: grid;
+    grid-template-rows: auto 0;
     z-index: 1;
     
     &::after{
@@ -84,8 +86,8 @@ export default function Category({className, data}) {
             className={className}
             to={data.url}>
             <Wrapper data={data}>
-                {/* <Content>
-                    <Title>{title}</Title>
+                <Content>
+                    <Title>{data.title}</Title>
                     <CTA>
                         <CTAText>
                             view projects
@@ -96,11 +98,11 @@ export default function Category({className, data}) {
                             width="8px"
                             height="16px"/>
                     </CTA>
-                </Content> */}
+                </Content>
                 <picture>
                     <source media="(min-width: 1440px)" srcSet={paths.desktop}/>
                     <source media="(min-width: 768px)" srcSet={paths.tablet}/>
-                    <BgImg src={paths.mobile} alt="" />
+                    <BgImg className="bg-img" src={paths.mobile} alt="" />
                 </picture>
             </Wrapper>
         </Link>
