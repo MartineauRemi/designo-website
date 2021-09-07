@@ -6,8 +6,6 @@ import SoftSkillsSection from '../layout/homepage/SoftSkillsSection'
 import CTABanner from '../layout/shared/CTABanner'
 
 const Main = styled.main`
-    padding: 0 var(--page-horizontal-padding);
-    padding-top: var(--page-top-padding);
     display: grid;
     row-gap: 7.5rem;
 
