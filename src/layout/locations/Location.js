@@ -54,6 +54,10 @@ const Article = styled.article`
         border-radius: var(--layout-border-radius);
         text-align: left;
     }
+
+    @media screen and (min-width: 1440px){
+        height: 100%;
+    }
 `
 
 const Text = styled.section`
