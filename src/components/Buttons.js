@@ -9,6 +9,9 @@ export const Button = styled.button`
     padding: var(--button-padding);
     transition: all .2s ease-in-out;
     border-radius: var(--btn-border-radius);
+    letter-spacing: 1px;
+    font-size: 15px;
+    line-height: 22px;
 `
 
 export const WhiteBtn = styled(Button)`

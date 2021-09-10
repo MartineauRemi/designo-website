@@ -1,9 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 import ContactForm from '../layout/contact/ContactForm'
+import LocationsCards from '../layout/shared/LocationsCards'
 
 const Main = styled.main`
+    display: grid;
+    row-gap: 7.5rem;
+    padding-bottom: 7.5rem;
+    
+    @media screen and (min-width: 768px){
+        padding: 0 2.5rem 7.5rem 2.5rem;
+    }
 
+    @media screen and (min-width: 1440px){
+        row-gap: 10rem;
+        padding-bottom: 10rem;
+    }
 `
 
 const TextContainer = styled.div`
@@ -57,6 +69,8 @@ export default function Contact() {
                 </TextContainer>
                 <ContactForm />
             </ContactSection>
+
+            <LocationsCards />
         </Main>
     )
 }
