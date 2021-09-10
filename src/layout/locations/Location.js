@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import bgMobile from "../../assets/shared/mobile/bg-pattern-design-pages-intro-mobile.svg"
 
 const Wrapper = styled.div`
     width: 100%;
@@ -49,6 +50,23 @@ const Article = styled.article`
     padding: 5rem 1.5rem;
     width: 100%;
     display: grid;
+    position: relative;
+    z-index: 1;
+
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(${bgMobile});
+        z-index: -1;
+        /* opacity: 0.2; */
+        background-repeat: no-repeat;
+        background-position: top 0 left -18.125rem;
+        background-size: 112%;
+    }
 
     @media screen and (min-width: 768px){
         border-radius: var(--layout-border-radius);
