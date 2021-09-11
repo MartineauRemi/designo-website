@@ -4,8 +4,6 @@ import instagram from "../assets/shared/desktop/icon-instagram.svg"
 import twitter from "../assets/shared/desktop/icon-twitter.svg"
 import youtube from "../assets/shared/desktop/icon-youtube.svg"
 import pinterest from "../assets/shared/desktop/icon-pinterest.svg"
-import React from 'react'
-import { Link } from "react-router-dom"
 
 export const Icon = styled.div`
     width: 1.5rem;

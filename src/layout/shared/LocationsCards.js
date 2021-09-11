@@ -11,7 +11,7 @@ const List = styled.ul`
     grid-template-columns: 1fr;
     max-width: 69.375rem;
     row-gap: 3rem;
-
+    
     @media screen and (min-width: 768px){
         row-gap: 3.625rem;
     }
@@ -72,7 +72,7 @@ export default function LocationsCards({className}) {
                 </ImgContainer>
                 <Title>Canada</Title>
                 <LinkPeachBtn>
-                    <Link to={baseURL + "#location-canada"}>see location</Link>
+                    <Link to={baseURL + "#location-Central"}>see location</Link>
                 </LinkPeachBtn>
             </Card>
 
@@ -81,7 +81,7 @@ export default function LocationsCards({className}) {
                     <img src={illustrationAustralia} alt="" /></ImgContainer>
                 <Title>Australia</Title>
                 <LinkPeachBtn>
-                    <Link to={baseURL + "#location-australia"}>see location</Link>
+                    <Link to={baseURL + "#location-AU"}>see location</Link>
                 </LinkPeachBtn>
             </Card>
 

@@ -40,8 +40,8 @@ export default function ProjectsGallery({className, category}) {
         <List
             id="projects-gallery" 
             className={className}>
-            {items.projects.map(project => (
-                <li className="projects-gallery__project">
+            {items.projects.map((project, index) => (
+                <li key={index} className="projects-gallery__project">
                     <Project project={project}/>
                 </li>
             ))}

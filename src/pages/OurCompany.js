@@ -14,26 +14,11 @@ import worldClassTalentTablet from "../assets/about/tablet/image-world-class-tal
 import worldClassTalentDesktop from "../assets/about/desktop/image-world-class-talent.jpg"
 
 import LocationsCards from '../layout/shared/LocationsCards'
-import CTABanner from '../layout/shared/CTABanner'
+import Page from "../layout/shared/Page"
+import CTABanner from "../layout/shared/CTABanner"
 
-const Main = styled.main`
-    .our-company__locations-cards{
-        margin-bottom: 7.5rem;
-    }
-
-    .our-company__text-card:nth-child(2){
-        margin-bottom: 7.5rem;
-    }
-
-    @media screen and (min-width: 768px){
-        padding: 0 2.5rem;
-    }
-
+const StyledPage = styled(Page)`
     @media screen and (min-width: 1440px){
-        .our-company__locations-cards{
-            margin-bottom: 10rem;
-        }
-
         .our-company__text-card{
             display: flex;
             flex-direction: row-reverse;
@@ -49,21 +34,8 @@ const Main = styled.main`
                 img{
                     border-radius: var(--layout-border-radius) 0 0 var(--layout-border-radius);
                 }
-
-                margin-bottom: 10rem;
             }
         }
-    }
-
-`
-
-const Card = styled.section`
-    @media screen and (min-width: 768px){
-        margin-bottom: 7.5rem;
-    }
-
-    @media screen and (min-width: 1440px){
-        margin-bottom: 10rem;
     }
 `
 
@@ -101,32 +73,32 @@ const Text = styled.div`
 `
 
 const Aside = styled.aside`
-   img{
+    img{
        width: 100%;
-   }
+       height: 100%;
+    }
 
-   @media screen and (min-width: 768px){
-       img{
-           border-radius: var(--layout-border-radius) var(--layout-border-radius) 0 0;
-       }
-   }
-
-   @media screen and (min-width: 1440px){
+    @media screen and (min-width: 768px){
         img{
-            border-radius: 0 var(--layout-border-radius) var(--layout-border-radius) 0;
-            width: 29.75rem;
+            border-radius: var(--layout-border-radius) var(--layout-border-radius) 0 0;
         }
-   }
+    }   
+    @media screen and (min-width: 1440px){
+         img{
+             border-radius: 0 var(--layout-border-radius) var(--layout-border-radius) 0;
+             width: 29.75rem;
+         }
+    }
 `
 
 export default function OurCompany() {
     return (
-        <Main>
-            <Card className="our-company__text-card">
+        <StyledPage>
+            <section className="our-company__text-card">
                 <Aside>
                     <picture>
-                        <source media="(min-width: 1440px)" srcset={aboutUsDesktop}/>
-                        <source media="(min-width: 768px)" srcset={aboutUsTablet}/>
+                        <source media="(min-width: 1440px)" srcSet={aboutUsDesktop}/>
+                        <source media="(min-width: 768px)" srcSet={aboutUsTablet}/>
                         <img src={aboutUsMobile} alt=""/>
                     </picture>
                 </Aside>
@@ -140,13 +112,13 @@ export default function OurCompany() {
                         </p>
                     </Text>
                 </Article>
-            </Card>
+            </section>
 
-            <Card className="our-company__text-card">
+            <section className="our-company__text-card">
                 <Aside>
                     <picture>
-                        <source media="(min-width: 1440px)" srcset={worldClassTalentDesktop}/>
-                        <source media="(min-width: 768px)" srcset={worldClassTalentTablet}/>
+                        <source media="(min-width: 1440px)" srcSet={worldClassTalentDesktop}/>
+                        <source media="(min-width: 768px)" srcSet={worldClassTalentTablet}/>
                         <img src={worldClassTalentMobile} alt=""/>
                     </picture>
                 </Aside>
@@ -163,15 +135,15 @@ export default function OurCompany() {
                         </p>
                     </Text>
                 </Article>
-            </Card>
+            </section>
 
             <LocationsCards className="our-company__locations-cards" />
 
-            <Card className="our-company__text-card">
+            <section className="our-company__text-card">
                 <Aside>
                     <picture>
-                        <source media="(min-width: 1440px)" srcset={theRealDealDesktop}/>
-                        <source media="(min-width: 768px)" srcset={theRealDealTablet}/>
+                        <source media="(min-width: 1440px)" srcSet={theRealDealDesktop}/>
+                        <source media="(min-width: 768px)" srcSet={theRealDealTablet}/>
                         <img src={theRealDealMobile} alt=""/>
                     </picture>
                 </Aside>
@@ -187,8 +159,9 @@ export default function OurCompany() {
                         </p>
                     </Text>
                 </Article>
-            </Card>
+            </section>
+
             <CTABanner />
-        </Main>
+        </StyledPage>
     )
 }

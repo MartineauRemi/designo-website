@@ -7,6 +7,10 @@ const Wrapper = styled.section`
     place-self: center;
     max-width: var(--layout-max-width);
     width: 100%;
+
+    @media screen and (max-width: 767px){
+        padding: 0 1.5rem;
+    }
 `
 const List = styled.ul`
     display: grid;
@@ -43,10 +47,11 @@ export default function Categories() {
         <Wrapper>
             <List>
                 {categories.map((category, index) => (
-                        <Category
+                        <li className={`categories__${category.category}`}>
+                            <Category
                             key={index}
-                            className={`categories__${category.category}`}
                             data={category.data} />
+                        </li>
                 ))}
             </List>
         </Wrapper>

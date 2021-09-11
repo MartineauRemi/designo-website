@@ -109,7 +109,7 @@ const Title = styled.h2`
 
 export default function Location({data, className}) {
     return (
-        <Wrapper className={className}>
+        <Wrapper className={className}  id={`location-${data.short}`}>
             <Aside>
                 <picture>
                     <source media="(min-width: 768px) and (max-width: 1439px)" srcSet={data.images.tablet}/>

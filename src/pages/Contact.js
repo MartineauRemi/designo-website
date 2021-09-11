@@ -1,22 +1,8 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import styled from 'styled-components'
 import ContactForm from '../layout/contact/ContactForm'
 import LocationsCards from '../layout/shared/LocationsCards'
-
-const Main = styled.main`
-    display: grid;
-    row-gap: 7.5rem;
-    padding-bottom: 7.5rem;
-    
-    @media screen and (min-width: 768px){
-        padding: 0 2.5rem 7.5rem 2.5rem;
-    }
-
-    @media screen and (min-width: 1440px){
-        row-gap: 10rem;
-        padding-bottom: 10rem;
-    }
-`
+import Page from '../layout/shared/Page'
 
 const TextContainer = styled.div`
     color: var(--white);
@@ -55,8 +41,13 @@ const ContactSection = styled.section`
 `
 
 export default function Contact() {
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    })
+
     return (
-        <Main>
+        <Page>
             <ContactSection>
                 <TextContainer>
                     <h1>Contact us</h1>
@@ -71,6 +62,6 @@ export default function Contact() {
             </ContactSection>
 
             <LocationsCards />
-        </Main>
+        </Page>
     )
 }

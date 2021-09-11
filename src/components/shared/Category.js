@@ -78,12 +78,11 @@ const CTAText = styled.h3`
     margin-right: 1rem;
 `
 
-export default function Category({className, data}) {
+export default function Category({data}) {
     const paths = data.images
     
     return (
         <Link
-            className={className}
             to={data.url}>
             <Wrapper data={data}>
                 <Content>
