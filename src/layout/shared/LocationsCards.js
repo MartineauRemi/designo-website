@@ -53,14 +53,6 @@ const Title = styled.h3`
     margin-bottom: 2rem;
 `
 
-const LinkPeachBtn = styled(PeachBtn)`
-    a{
-        color: var(--white);
-    }
-`
-
-
-
 export default function LocationsCards({className}) {
     const baseURL = "/locations"
     
@@ -71,18 +63,22 @@ export default function LocationsCards({className}) {
                     <img src={illustrationCanada} alt="" />
                 </ImgContainer>
                 <Title>Canada</Title>
-                <LinkPeachBtn>
-                    <Link to={baseURL + "#location-Central"}>see location</Link>
-                </LinkPeachBtn>
+                <Link to={baseURL + "#location-Central"}>
+                    <PeachBtn>
+                        see location
+                    </PeachBtn>
+                </Link>
             </Card>
 
             <Card>
                 <ImgContainer>
                     <img src={illustrationAustralia} alt="" /></ImgContainer>
                 <Title>Australia</Title>
-                <LinkPeachBtn>
-                    <Link to={baseURL + "#location-AU"}>see location</Link>
-                </LinkPeachBtn>
+                <Link to={baseURL + "#location-AU"}>
+                    <PeachBtn>
+                        see location
+                    </PeachBtn>
+                </Link>
             </Card>
 
             <Card>
@@ -90,9 +86,11 @@ export default function LocationsCards({className}) {
                     <img src={illustrationUK} alt="" />
                 </ImgContainer>
                 <Title>United Kingdom</Title>
-                <LinkPeachBtn>
-                    <Link to={baseURL + "#location-UK"}>see location</Link>
-                </LinkPeachBtn>
+                <Link to={baseURL + "#location-UK"}>
+                    <PeachBtn>
+                        see location
+                    </PeachBtn>
+                </Link>
             </Card>
         </List>
     )
