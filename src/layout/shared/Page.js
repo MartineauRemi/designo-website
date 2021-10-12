@@ -1,11 +1,12 @@
 import React, { useLayoutEffect } from 'react'
 import styled from 'styled-components'
-
+import { fadeInAnim } from '../../helpers/Animations'
 
 const Main = styled.main`
     display: grid;
     row-gap: 4rem;
     padding-bottom: 4rem;
+    animation: 1s ${fadeInAnim};
     
     @media screen and (min-width: 768px){
         padding: 0 2.5rem 4rem 2.5rem;
