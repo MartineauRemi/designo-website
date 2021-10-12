@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import bgPatternMobile from "../assets/about/mobile/bg-pattern-hero-about-mobile.svg"
+import bgPatterDesktop from "../assets/about/desktop/bg-pattern-hero-about-desktop.svg"
+
 import aboutUsMobile from "../assets/about/mobile/image-about-hero.jpg"
 import aboutUsTablet from "../assets/about/tablet/image-about-hero.jpg"
 import aboutUsDesktop from "../assets/about/desktop/image-about-hero.jpg"
@@ -31,7 +34,7 @@ const StyledPage = styled(Page)`
                     border-radius: 0 var(--layout-border-radius) var(--layout-border-radius) 0;
                 }
 
-                img{
+                aside img{
                     border-radius: var(--layout-border-radius) 0 0 var(--layout-border-radius);
                 }
             }
@@ -41,6 +44,8 @@ const StyledPage = styled(Page)`
 
 const Article = styled.article`
     padding: 5rem 1.5rem;
+    position: relative;
+    overflow: hidden;
     height: auto;
     display: grid;
 
@@ -55,6 +60,11 @@ const Article = styled.article`
                         ? 'var(--white)' : 'var(--peach)'};
 
         margin-bottom: 1.5rem;
+    }
+
+    img{
+        opacity: ${props => props.color === 'white'
+                        ? '1' : '0.5'};
     }
 
     @media screen and (min-width: 768px){
@@ -76,6 +86,7 @@ const Aside = styled.aside`
     img{
        width: 100%;
        height: 100%;
+       display: block;
     }
 
     @media screen and (min-width: 768px){
@@ -91,6 +102,12 @@ const Aside = styled.aside`
     }
 `
 
+const Image = styled.img`
+    position: absolute;
+    top: -30%;
+    right: 0;
+`
+
 export default function OurCompany() {
     return (
         <StyledPage>
@@ -103,6 +120,10 @@ export default function OurCompany() {
                     </picture>
                 </Aside>
                 <Article color='white'>
+                    <picture>
+                        <source srcSet={bgPatterDesktop} media='(min-width: 1440px)' />
+                        <Image src={bgPatternMobile} alt='' aria-hidden='true' />
+                    </picture>
                     <Text>
                         <h1>About Us</h1>
                         <p>
@@ -123,6 +144,10 @@ export default function OurCompany() {
                     </picture>
                 </Aside>
                 <Article>
+                    <picture>
+                        <source srcSet={bgPatterDesktop} media='(min-width: 1440px)' />
+                        <Image src={bgPatternMobile} alt='' aria-hidden='true' />
+                    </picture>
                     <Text>
                         <h1>World-class talent</h1>
                         <p>
@@ -148,6 +173,10 @@ export default function OurCompany() {
                     </picture>
                 </Aside>
                 <Article>
+                    <picture>
+                        <source srcSet={bgPatterDesktop} media='(min-width: 1440px)' />
+                        <Image src={bgPatternMobile} alt='' aria-hidden='true' />
+                    </picture>
                     <Text>
                         <h1>The real deal</h1>
                         <p>
