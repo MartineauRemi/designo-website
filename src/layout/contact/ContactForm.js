@@ -1,51 +1,9 @@
 import React from 'react'
-import { Formik, Form, useField} from 'formik'
-import * as Yup from 'yup'
+import { Formik, Form} from 'formik'
 import styled from 'styled-components'
 import { WhiteBtn } from "../../components/Buttons"
-import errorIcon from "../../assets/contact/desktop/icon-error.svg"
-
-
-const TextInput = ({ label, ...props }) => {
-    // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
-    // which we can spread on <input>. We can use field meta to show an error
-    // message if the field is invalid and it has been touched (i.e. visited)
-
-    const [field, meta] = useField(props);
-    return (
-      <>
-        <div className="input-container">
-            <input className="text-input" {...field} {...props} />
-            {meta.touched && meta.error
-                ? (
-                    <div className="error">
-                        <img src={errorIcon} alt="" width="20px" height="20px"/>
-                        {meta.error}
-                    </div>)
-                : null}
-        </div>
-      </>
-    )
-  }
-
-  const TextAreaInput = ({ label, ...props }) => {
-
-    const [field, meta] = useField(props);
-    return (
-      <>
-        <div className="input-container">
-            <textarea className="textarea-input" {...field} {...props} />
-            {meta.touched && meta.error
-                ? (
-                    <div className="error">
-                        <img src={errorIcon} alt="" width="20px" height="20px"/>
-                        {meta.error}
-                    </div>)
-                : null}
-        </div>
-      </>
-    )
-  }
+import { contactFormValidation } from '../../validations/ContactForm'
+import { TextInput, TextAreaInput } from '../../components/shared/forms/Inputs'
 
 const StyledForm = styled(Form)`
     color: var(--white);
@@ -113,32 +71,22 @@ const StyledForm = styled(Form)`
 `
 
 export default function ContactForm() {
-    
+    const initialValues = {
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
+    }
+
     return (
         <Formik
-            initialValues={{
-                name: "",
-                email: "",
-                phone: "",
-                message: ""
-            }}
-            validationSchema={Yup.object({
-                name: Yup.string()
-                    .max(20, 'Must be 20 characters or less')
-                    .required('Required'),
-                email: Yup.string()
-                    .email('Invalid email address')
-                    .required('Required'),
-                phone: Yup.string()
-                    .required('Required'),
-                message: Yup.string()
-                    .max(250, 'Must be 250 characters or less')
-                    .required('Required')
-            })}
-            onSubmit={(values, {setSubmitting}) => {
+            initialValues={initialValues}
+            validationSchema={contactFormValidation}
+            onSubmit={(values, {setSubmitting, resetForm}) => {
                 setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2))
+                    alert('Message sent successfully. Thank you !')
                     setSubmitting(false)
+                    resetForm({values: ''})
                 }, 400)
             }}>
                 <StyledForm>
