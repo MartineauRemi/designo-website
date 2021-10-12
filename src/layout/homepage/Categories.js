@@ -50,7 +50,7 @@ export default function Categories() {
                         <li className={`categories__${category.category}`}>
                             <Category
                             key={index}
-                            data={category.data} />
+                            data={category} />
                         </li>
                 ))}
             </List>
