@@ -27,23 +27,24 @@ const Container = styled.div`
 
 export default function Projects() {
     const {category} = useParams()
+    const selectedCategory = categories.find(cat => cat.category === category)
+    const otherCategories = categories.filter(cat => cat.category !== category)
 
     return (
         <Page>
             <ProjectsHeader
                 className='projects__projects-header'
-                category={category} />
+                category={selectedCategory} />
             <ProjectsGallery
                 className='projects__projects-gallery'
-                category={category}/>
+                projects={selectedCategory.projects}/>
             <Container>
-                {categories
-                    .filter(item => item.category !== category)
-                    .map((item, index) => (
-                        <li className={`projects__${item.category}`}> 
+                {otherCategories
+                    .map((project, index) => (
+                        <li className={`projects__${project.category}`}> 
                             <Category
                                     key={index}
-                                    data={item.data} />
+                                    data={project} />
                         </li>
                     ))}
             </Container>

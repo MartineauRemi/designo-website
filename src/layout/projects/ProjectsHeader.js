@@ -1,19 +1,43 @@
 import React from 'react'
 import styled from 'styled-components'
 
-
 const Wrapper = styled.section`
     background-color: var(--peach);
     color: var(--white);
     text-align: center;
     width: 100%;
     height: 20rem;
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0 1.5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    picture{
+        width: 0;
+        height: 0;
+    }
 
     @media screen and (min-width: 768px){
         border-radius: var(--layout-border-radius);
         height: 15.75rem;
+    }
+`
+
+const Image = styled.img`
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+
+    @media screen and (min-width: 768px){
+        top: -50%;
+    }
+
+    @media screen and (min-width: 1440px){
+        height: 36.5rem;
     }
 `
 
@@ -23,33 +47,22 @@ const Title = styled.h1`
 `
 
 const Text = styled.div`
-    place-self: center;
     max-width: 400px;
+    z-index: 2;
 `
 
-export default function ProjectsHeader({className,category}) {
-    const title = category.replace('-', ' ')
-    const paraphs = [
-        {
-            category: "web-design",
-            text: "We build websites that serve as powerful marketing tools and bring memorable brand experiences."
-        },
-        {
-            category: "app-design",
-            text: "Our mobile designs bring intuitive digital solutions to your customers right at their fingertips."
-        },
-        {category: "graphic-design",
-            text: "We deliver eye-catching branding materials that are tailored to meet your business objectives."
-        }
-    ]
-
-    const paraph = paraphs.filter(p => p.category === category)[0];
-
+export default function ProjectsHeader({className, category}) {
+    const bgImages = category.images.bgIntro
     return (
         <Wrapper className={className}>
+            <picture>
+                <source srcset={bgImages.desktop} media="(min-width: 1440px)"/>
+                <source srcset={bgImages.tablet} media='(min-width: 768px)'/>
+                <Image src={bgImages.mobile} alt="" aria-hidden='true' />
+            </picture>
             <Text>
-                <Title>{title}</Title>
-                <p>{paraph.text}</p>
+                <Title>{category.title}</Title>
+                <p>{category.description}</p>
             </Text>
         </Wrapper>
     )

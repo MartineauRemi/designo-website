@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import {projects} from "../../data/projects"
 import Project from '../../components/projects/Project'
 
 const List = styled.ul`
@@ -33,14 +32,13 @@ const List = styled.ul`
     }
 `
 
-export default function ProjectsGallery({className, category}) {
-    const items = projects.filter(p => p.category === category)[0]
+export default function ProjectsGallery({className, projects}) {
 
     return (
         <List
             id="projects-gallery" 
             className={className}>
-            {items.projects.map((project, index) => (
+            {projects.map((project, index) => (
                 <li key={index} className="projects-gallery__project">
                     <Project project={project}/>
                 </li>

@@ -12,6 +12,8 @@ const Wrapper = styled.div`
     display: grid;
     grid-template-rows: auto 0;
     z-index: 1;
+    overflow: hidden;
+
     
     &::after{
         content: '';
@@ -24,6 +26,14 @@ const Wrapper = styled.div`
         left: 0;
         border-radius: var(--layout-border-radius);
         transition: all 0.3s ease-in-out;
+    }
+
+    img{
+        transition: all .5s ease-in-out;
+    }
+
+    &:hover img{
+        transform: scale(1.05);
     }
 
     &:hover::after{
