@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import bgMobile from "../../assets/shared/mobile/bg-pattern-design-pages-intro-mobile.svg"
+import bgDesktop from "../../assets/shared/desktop/bg-pattern-two-circles.svg"
 
 const Wrapper = styled.div`
     width: 100%;
@@ -62,15 +63,22 @@ const Article = styled.article`
         left: 0;
         background: url(${bgMobile});
         z-index: -1;
-        /* opacity: 0.2; */
+        opacity: 0.4;
         background-repeat: no-repeat;
-        background-position: top 0 left -18.125rem;
-        background-size: 112%;
+        background-position: top 0 left 55%;
+        background-size: 250%;
     }
 
     @media screen and (min-width: 768px){
         border-radius: var(--layout-border-radius);
         text-align: left;
+        
+        &::after{
+            opacity: 1;
+            background: url(${bgDesktop});
+            background-repeat: no-repeat;
+            background-position: bottom left;
+        }
     }
 
     @media screen and (min-width: 1440px){
