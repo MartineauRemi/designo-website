@@ -61,7 +61,7 @@ export default function Header() {
     return (
         <Wrapper>
             <Content>
-                <Link to="/home">
+                <Link to="/">
                     <Logo dark className='logo' alt="Welcome to Designo" />
                 </Link>
                 <MenuBtn

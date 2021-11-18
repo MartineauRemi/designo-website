@@ -29,7 +29,7 @@ function App() {
         <Header />
 
         <Switch>
-          <Route exact path="/home">
+          <Route exact path="/">
             <Homepage />
           </Route>
           <Route path="/projects/:category">
