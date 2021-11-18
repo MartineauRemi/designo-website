@@ -114,12 +114,12 @@ export default function Hero() {
                     With over 10 years in the industry, we are experienced with creating fully responsive websites,
                     app design, and engaging brand experiences. Find out more about our services.
                 </p>
-                <Link to="our-company">
+                <Link to="/our-company" aria-label='Discover our company'>
                     <WhiteBtn>Learn more</WhiteBtn>
                 </Link>
             </Article>
             <Aside>
-                <img src={heroPhone} alt=""/>
+                <img src={heroPhone} alt="" aria-hidden='true'/>
             </Aside>
         </Wrapper>
     )

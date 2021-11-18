@@ -49,8 +49,16 @@ const ImgContainer = styled.div`
     }
 `
 
-const Title = styled.h3`
+const Title = styled.strong`
     margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    letter-spacing: 5px;
+
+    @media screen and (min-width: 768px){
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+    }
 `
 
 export default function LocationsCards({className}) {

@@ -96,7 +96,7 @@ export default function Footer() {
     return (
         <Wrapper>
             <Content>
-                <Link to="/">
+                <Link to="/" aria-label='Homepage'>
                     <Logo light />
                 </Link>
                 <Line className="footer__line"/>
@@ -115,27 +115,27 @@ export default function Footer() {
 
                 <SocialMediaList>
                     <SocialMedia>
-                        <a href={socialMediaURLs.facebook} target='_blank' rel='noreferrer'>
+                        <a href={socialMediaURLs.facebook} aria-label="facebook" target='_blank' rel='noreferrer'>
                             <FacebookIcon />
                         </a>
                     </SocialMedia>
                     <SocialMedia>
-                        <a href={socialMediaURLs.youtube} target='_blank' rel='noreferrer'>
+                        <a href={socialMediaURLs.youtube} aria-label="youtube" target='_blank' rel='noreferrer'>
                             <YoutubeIcon />
                         </a>
                     </SocialMedia>
                     <SocialMedia>
-                        <a href={socialMediaURLs.twitter} target='_blank' rel='noreferrer'>
+                        <a href={socialMediaURLs.twitter} aria-label="twitter" target='_blank' rel='noreferrer'>
                             <TwitterIcon />
                         </a>
                     </SocialMedia>
                     <SocialMedia>
-                        <a href={socialMediaURLs.pinterest} target='_blank' rel='noreferrer'>
+                        <a href={socialMediaURLs.pinterest} aria-label="pinterest" target='_blank' rel='noreferrer'>
                             <PinterestIcon />
                         </a>
                     </SocialMedia>
                     <SocialMedia>
-                        <a href={socialMediaURLs.instagram} target='_blank' rel='noreferrer'>
+                        <a href={socialMediaURLs.instagram} aria-label="instagram" target='_blank' rel='noreferrer'>
                             <InstagramIcon />
                         </a>
                     </SocialMedia>

@@ -47,9 +47,8 @@ export default function Categories() {
         <Wrapper>
             <List>
                 {categories.map((category, index) => (
-                        <li className={`categories__${category.category}`}>
+                        <li key={index} className={`categories__${category.category}`}>
                             <Category
-                            key={index}
                             data={category} />
                         </li>
                 ))}

@@ -64,7 +64,10 @@ export default function Header() {
                 <Link to="/">
                     <Logo dark className='logo' alt="Welcome to Designo" />
                 </Link>
-                <MenuBtn onClick={() => onClickMenuBtn()}>
+                <MenuBtn
+                    aria-label='menu'
+                    onClick={() => onClickMenuBtn()}
+                >
                     <img
                         src={menuBtnSrc}
                         alt=""
