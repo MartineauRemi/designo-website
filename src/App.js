@@ -29,7 +29,7 @@ function App() {
         <Header />
 
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/designo-website">
             <Homepage />
           </Route>
           <Route path="/projects/:category">
