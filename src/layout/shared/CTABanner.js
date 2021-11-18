@@ -74,7 +74,7 @@ export default function CTABanner() {
                         Ready to take it to the next level?
                         Contact us today and find out how our expertise can help your business grow.
                     </p>
-                    <Link className="cta-banner__cta" to="/contact">
+                    <Link className="cta-banner__cta" to="/designo-website/contact">
                         <WhiteBtn>
                             get in touch
                         </WhiteBtn>

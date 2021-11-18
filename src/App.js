@@ -29,19 +29,19 @@ function App() {
         <Header />
 
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/designo-website/">
             <Homepage />
           </Route>
-          <Route path="/projects/:category">
+          <Route path="/designo-website/projects/:category">
             <Projects />
           </Route>
-          <Route path="/our-company">
+          <Route path="/designo-website/our-company">
             <OurCompany />
           </Route>
-          <Route path="/locations">
+          <Route path="/designo-website/locations">
             <Locations />
           </Route>
-          <Route path="/contact">
+          <Route path="/designo-website/contact">
             <Contact />
           </Route>
         </Switch>

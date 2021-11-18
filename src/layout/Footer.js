@@ -96,7 +96,7 @@ export default function Footer() {
     return (
         <Wrapper>
             <Content>
-                <Link to="/" aria-label='Homepage'>
+                <Link to="/designo-website/" aria-label='Homepage'>
                     <Logo light />
                 </Link>
                 <Line className="footer__line"/>

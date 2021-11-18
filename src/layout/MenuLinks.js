@@ -57,13 +57,13 @@ export default function MenuLinks({className, header}) {
     return (
         <Links className={className} header={header}>
             <LinkWrapper>
-                <Link to="/our-company">Our Company</Link>
+                <Link to="/designo-website/our-company">Our Company</Link>
             </LinkWrapper>
             <LinkWrapper>
-                <Link to="/locations">Locations</Link>
+                <Link to="/designo-website/locations">Locations</Link>
             </LinkWrapper>
             <LinkWrapper>
-                <Link to="/contact">Contact</Link>
+                <Link to="/designo-website/contact">Contact</Link>
             </LinkWrapper>
         </Links>
     )

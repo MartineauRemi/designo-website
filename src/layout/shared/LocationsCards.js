@@ -62,7 +62,7 @@ const Title = styled.strong`
 `
 
 export default function LocationsCards({className}) {
-    const baseURL = "/locations"
+    const baseURL = "/designo-website/locations"
     
     return (
         <List className={className}>
